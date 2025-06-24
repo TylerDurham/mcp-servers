@@ -1,9 +1,18 @@
 [project]
-name = "math"
+name = "math-mcp"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
     "fastmcp>=2.9.0",
+    "tomli>=2.2.1",
 ]
+
+[project.scripts]
+math-mcp = "mathmcp.server:run"
+
+[math-mcp.server]
+port = 9080 
+transport = "streamable-http"
+host = "http://127.0.0.1"

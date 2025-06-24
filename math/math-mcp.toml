@@ -1,0 +1,5 @@
+
+[server]
+port = 8080
+transport = "streamable-http"
+host = "http://127.0.0.1"
